@@ -1,0 +1,237 @@
+html,
+body{
+    height: 100%;
+}
+body{
+    --background-color: rgb(54, 54, 54);
+    --header-background: rgb(41, 40, 40);
+    --title-color: rgb(243, 201, 87);
+    --books-background: rgb(46, 45, 45);
+    --icon-first: rgb(216, 100, 5);
+    --icon-sec: black;
+    --button-text-color: black;
+    --input-bg-color: rgb(252, 252, 252);
+    --shadow-color: rgb(26, 25, 25);
+    transition: 1s;
+
+    background-color: var(--background-color);
+    padding: 0px;
+    margin: 0px;
+    font-style: italic;
+}
+body.brigth{
+    --background-color: rgb(248, 239, 222);
+    --header-background: rgb(248, 218, 163);
+    --title-color: rgb(228, 120, 31);
+    --books-background:rgb(247, 232, 205);
+    --icon-first: black;
+    --icon-sec: rgb(216, 100, 5);
+    --button-text-color: white;
+    --input-bg-color: white;
+    --shadow-color: rgb(247, 206, 131);
+}
+
+header{
+    text-align: center;
+    position: relative;
+    top: 0px;
+    height: 50px;
+    background-color: var(--header-background);
+}
+header h1{
+    margin: 0px;
+    font-size: 40px;
+    color: var(--title-color);
+}
+#theme{
+    margin-top: 10px;
+    text-align: center;
+}
+#light{
+    width: 50px;
+    height: 50px;
+    fill: var(--icon-sec);
+}
+#light:hover{
+    fill: var(--icon-first);
+    transition: 1.5s;
+}
+
+/*Main part*/
+#main{
+    background-color: var(--header-background);
+    width: 65rem;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    margin-top: 40px;
+    margin-bottom: 40px;
+}
+
+/*Form*/
+#bookForm{
+    height: 13rem;
+    padding: 1.5rem;
+    display: grid;
+    grid-template-columns: 50% 50%;
+    grid-template-rows: 30% 25% 25% 20%;
+    grid-gap: 5px;
+    grid-template-areas: 
+    "title title"
+    "author genres"
+    "release pages"
+    "submit submit"
+}
+.formDiv{
+    display: flex;
+    flex-direction: column;
+    background-color: var(--header-background);
+}
+.formInput{
+    height: 20px;
+    border-radius: 5px;
+    border: none;
+    background-color: var(--input-bg-color);
+    outline: none;
+}
+.formLabel{
+    color: var(--title-color);
+    font-weight: bold;
+}
+#titleDiv{
+    grid-area: title;
+}
+#authorDiv{
+    grid-area: author;
+}
+#genresDiv{
+    grid-area: genres;
+}
+#releaseDiv{
+    grid-area: release;
+}
+#pagesDiv{
+    grid-area: pages;
+}
+#submit{
+    height: 30px;
+    padding: 10px 15px 0px 15px;
+    grid-area: submit;
+    justify-self: center;
+    background-color: var(--title-color);
+    color: var(--button-text-color);
+    border: none;
+    border-radius: 5px;
+    font-weight: bold;
+    outline: none;
+    text-align: center;
+}
+#submit:hover{
+    transform: scale(1.1);
+}
+
+/* Search part*/
+#books{
+    background-color: var(--books-background);
+    min-height: 400px;
+    padding-bottom: 20px;
+    text-align: center;
+}
+#searchDiv{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: var(--books-background);
+    padding-top: 5px;
+}
+#searchDiv label{
+    color: var(--title-color);
+    font-weight: bold;
+    font-size: 25px;
+    margin-bottom: 1rem;
+    margin-top: 1rem;
+}
+#searchDiv input{
+    width: 300px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+    border: none;
+    background-color: var(--input-bg-color);
+    outline: none;
+}
+
+/*Added book*/
+.book{
+    background-color: var(--input-bg-color);
+    margin-top: 20px;
+    margin-left: 30px;
+    margin-right: 30px;
+    margin-top: 20px;
+    padding: 10px 10px 10px 15px;
+    border-radius: 5px;
+    display: grid;
+    grid-template-columns: 70% 15% 15%;
+}
+.book p {
+    text-decoration: underline;
+    font-size: 15px;
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+.book:hover{
+    transform: scale(1.05);
+    transition: 1s;
+}
+.bookBtn{
+    border: none;
+    border-radius: 3px;
+    font-size: 15px;
+    padding: 5px 7px 5px 7px;
+    color: white;
+    outline: none;
+}
+.read{
+    background-color: rgb(211, 156, 18);
+    justify-self: center;
+}
+.delete{
+    background-color: rgb(175, 4, 4);
+    justify-self: center;
+}
+
+
+#footer{
+    background-color: rgb(41, 41, 46);
+    height: 35px;
+    width: 100%;
+    position: fixed;
+    bottom: 0;
+    border-top: solid;
+    border-width: 2px;
+    display: flex;
+    align-items: center;
+}
+#madeBy{
+    color: white;
+    margin-left: 10px;
+}
+#madeBy a {
+    margin-left: 3px;
+    text-decoration: none;
+    color: white;
+}
+#madeBy a:hover{
+    font-weight: bold;
+}
+#odin{
+    color: white;
+    position: absolute;
+    right: 10px;
+}
+
+@media (max-width: 1100px){
+    #main{
+        width: 40rem;
+        transition: 1s;
+    }
+}
