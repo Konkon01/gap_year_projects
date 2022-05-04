@@ -1,0 +1,128 @@
+html {
+  height: 100%;
+  padding: 0px;
+  overflow-y: hidden;
+}
+body{
+  height: 100%;
+  padding: 0px;
+  font-family: 'Courier New', Courier, monospace;
+}
+
+/*root div*/
+#root{
+  height: 100%;
+  margin: 0px;
+  padding: 0px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  
+}
+
+/* App.js */
+.App {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  justify-self: center;
+
+  width: 100%;
+
+  padding: 0px;
+  margin: 0px;
+}
+
+/* ScoreBoard.js */
+#ScoreBoard{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+
+  background-color: white;
+
+  padding: 15px;
+  width: 350px;
+
+  border: 1px solid black;
+  border-radius: 5px;
+  margin-bottom: 20px;
+}
+#ScoreBoard p {
+  margin: 0px;
+}
+
+/*CardBoard.js*/
+#CardBoard {
+  width: 100%;
+  max-width: 1100px;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+/*Cards*/
+.card {
+  width: 180px;
+  height: 180px;
+  background-color: white;
+
+  padding: 5px;
+  margin: 10px 10px;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  cursor: pointer;
+
+  border: 1px solid black;
+
+  animation-name: appear;
+  animation-duration: 1.5s;
+}
+.cardImgs {
+  width: 180px;
+  height: 130px;
+  pointer-events: none;
+}
+.card p {
+  pointer-events: none;
+}
+.card:hover {
+  box-shadow: 6px 11px 33px -4px rgba(0,0,0,0.68);
+}
+
+@keyframes appear {
+  from {
+    transform: rotateY(-180deg);
+  }
+  to {
+    transform: rotateY(0deg);
+  }
+}
+
+/*GameOver.js*/
+#GameOver {
+  height: 100%;
+  width: 100%;
+
+  background-color: rgba(0, 0, 0, 0.76);
+  color: white;
+
+  position: absolute;
+  top: 0px;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+#GameOver h1 {
+  font-size: 80px;
+}
+#GameOver p {
+  font-size: 30px;
+}
