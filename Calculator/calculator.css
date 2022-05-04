@@ -1,0 +1,190 @@
+body{
+    --bg-color : rgb(159, 215, 248);
+    --calc-body-bg-color: rgb(248, 214, 151);
+    --screen-bg-color: var(--num-btns-background-color);
+    --screen-bg-color: white;
+    --screen-text-and-border: black;
+    --button-part-color: rgb(56, 53, 53);
+    --op-btns-bg-color: rgb(223, 217, 217);
+    --num-btns-bg-color: white;
+    --clear-btn-bg-color: rgb(245, 143, 26);
+    --transition-delay: 1.5s;
+
+    height: 100%;
+    margin: 0;
+    background-color: var(--bg-color);
+    transition: var(--transition-delay);
+}
+
+body.dark{
+    --bg-color : rgb(85, 83, 83);
+    --calc-body-bg-color: rgb(41, 41, 46);
+    --screen-bg-color: rgb(70, 69, 69);
+    --screen-text-and-border: lightgrey;
+    --button-part-color: white;
+    --op-btns-bg-color: rgb(30, 30, 34);
+    --num-btns-bg-color: rgb(41, 41, 46);
+    --clear-btn-bg-color: rgb(204, 115, 13);
+    --icon-color: var(--button-part-color);
+}
+
+#calcBody{
+    width: 300px;
+    height: 400px;
+    margin: auto;
+    padding: 20px;
+    background-color: var(--calc-body-bg-color);
+    margin-top: 150px;
+    border: solid;
+    border-width: 2px;
+}
+
+#screen {
+    height: 75px;
+    margin-bottom: 23px;
+    background-color: var(--screen-bg-color);
+    color: var(--screen-text-and-border);
+    border: solid;
+    border-width: 1px;
+    border-radius: 3px;
+    text-align: right;
+    display: grid;
+    grid-template-rows: 65% 35%;
+}
+#topScreen{
+    font-size: 37px;
+    border-bottom: solid;
+    border-color: var(--screen-text-and-border);
+    border-width: 1px;
+}
+#bottomScreen{
+    font-size: 25px;
+}
+
+#buttonPart{
+    height: 300px;
+    width: 300px;
+    display: grid;
+    grid-template-columns: 20% 80%;
+    color: var(--button-part-color);
+}
+.allBtns:hover{
+    font-size: 45px;
+}
+#clear:hover{
+    font-size: 45px;
+}
+#equal:hover{
+    font-size: 45px;
+}
+
+#operations{
+    display: grid;
+    grid-template-rows: repeat(5, 1fr);
+}
+.operationBtns{
+    background-color: var(--op-btns-bg-color);
+    font-size: 35px;
+    width: 100%;
+    justify-self: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: solid;
+    border-width: 1px;
+    transition: 0.5s;
+}
+#equal{
+    background-color: var(--op-btns-bg-color);
+    font-size: 35px;
+    width: 100%;
+    justify-self: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: solid;
+    border-width: 1px;
+}
+#opsAndNums{
+    display: grid;
+    grid-template-rows: 60px 240px;
+}
+#upperOps{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+}
+
+#numbers{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(4, 1fr);
+}
+.numberBtns{
+    background-color: var(--num-btns-bg-color);
+    font-size: 35px;
+    width: 100%;
+    justify-self: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: solid;
+    border-width: 1px;
+    transition: 0.5s;
+}
+#theme{
+    background-color: var(--num-btns-bg-color);
+    font-size: 35px;
+    width: 100%;
+    justify-self: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: solid;
+    border-width: 1px;
+    transition: 0.5s;
+}
+#theme:hover{
+    --icon-color: var(--clear-btn-bg-color);
+}
+#icon{
+    margin: 0px;
+    padding: 10px;
+    display: block;
+    fill: var(--icon-color);
+    transition: var(--transition-delay);
+}
+
+#clear{
+    background-color: var(--clear-btn-bg-color);
+    font-size: 40px;
+    width: 100%;
+    justify-self: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: solid;
+    border-width: 1px;
+} 
+
+
+#projectText{
+    margin-top: 50px;
+    text-align: center;
+    color: white;
+}
+
+
+#footer{
+    background-color: rgb(41, 41, 46);
+    height: 35px;
+    width: 100%;
+    position: fixed;
+    bottom: 0;
+    border-top: solid;
+    border-width: 2px;
+}
+#madeBy{
+    color: white;
+    margin-left: 10px;
+    margin-top: 5px;
+}
